@@ -6,7 +6,8 @@
   "author": "muirurikin <muirurikin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": ". ./tests/setup.sh && ./node_modules/mocha/bin/_mocha --timeout=10000 --recursive tests"
   },
   "dependencies": {
     "config": "^3.0.1",
