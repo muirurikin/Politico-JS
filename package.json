@@ -15,6 +15,7 @@
   "dependencies": {
     "config": "^3.0.1",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-joi-router": "^5.3.0",
     "loggery": "^1.0.2"
   },
