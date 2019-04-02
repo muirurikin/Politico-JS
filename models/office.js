@@ -21,5 +21,9 @@ class Office {
     }
 
     this.offices.push(newOffice);
+
+    return newOffice;
   }
 }
+
+module.exports = Office;
