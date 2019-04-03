@@ -6,32 +6,18 @@ const Office = require('../models/office');
 const public = router();
 
 public.get('/offices', async (ctx) => {
-  ctx.body = Office.find()
+  ctx.body = Office.find();
 });
- 
-// public.route({
-//   method: 'get',
-//   path: '/offices',
-//   validate: {
-//     body: {
-//       name: Joi.string().max(100),
-//       type: Joi.string().max(100),
-//     },
-//     type: 'form',
-//     output: {
-//       200: {
-//         body: {
-//           userId: Joi.string(),
-//           name: Joi.string()
-//         }
-//       }
-//     }
-//   },
-//   handler: async (ctx) => {
-//     const user = await createUser(ctx.request.body);
-//     ctx.status = 201;
-//     ctx.body = user;
-//   }
-// });
+
+public.post('/offices', async (ctx) => {
+  const { name, type } = ctx.request.body;
+
+  const office = {
+    name,
+    type,
+  }
+  Office.create(office);
+  ctx.status = 201;
+})
 
 module.exports = public;
