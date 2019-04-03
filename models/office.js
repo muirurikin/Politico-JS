@@ -1,11 +1,17 @@
 class Office {
 
   constructor () {
-    this.offices = [];
+    this.offices = [
+      { "name": "ODM", "type": "local govt"},
+      { "name": "Jubilee", "type": "local govt"},
+      { "name": "Wiper", "type": "local govt"},
+      { "name": "Nasa", "type": "local govt"},
+      { "name": "Kanu", "type": "local govt"}
+    ];
   }
 
   find () {
-    return this.offices
+    return this.offices;
   }
 
   findById() {
@@ -26,4 +32,4 @@ class Office {
   }
 }
 
-module.exports = Office;
+module.exports = new Office();
